@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 900px;
+    height: 300px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar svg {
+    width: 110px;
+    height: 110px;
+  }
+
+  .label {
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .opt-a { background: #060606; border: 1px solid #222; }
+  .opt-b { background: #b9ff00; }
+  .opt-c { background: #060606; border: 1px solid #222; }
+</style>
+</head>
+<body>
+
+<!-- Option A: White on Black -->
+<div class="option">
+  <div class="avatar opt-a">
+    <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="55" y="85" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="72" fill="#f0ece4">2A</text>
+    </svg>
+  </div>
+  <span class="label">White on Black</span>
+</div>
+
+<!-- Option B: Black on Green -->
+<div class="option">
+  <div class="avatar opt-b">
+    <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="55" y="85" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="72" fill="#060606">2A</text>
+    </svg>
+  </div>
+  <span class="label">Black on Green</span>
+</div>
+
+<!-- Option C: Green on Black -->
+<div class="option">
+  <div class="avatar opt-c">
+    <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="55" y="85" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="72" fill="#b9ff00">2A</text>
+    </svg>
+  </div>
+  <span class="label">Green on Black</span>
+</div>
+
+</body>
+</html>

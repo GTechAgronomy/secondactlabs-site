@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1500px;
+    height: 500px;
+    overflow: hidden;
+    background: #060606;
+    font-family: 'Bebas Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  .wrap {
+    position: relative;
+    width: 1500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 52px 80px 0;
+  }
+
+  .eyebrow {
+    font-size: 18px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .headline {
+    font-size: 185px;
+    line-height: 0.85;
+    letter-spacing: -0.01em;
+    color: #f0ece4;
+  }
+
+  .headline .green {
+    color: #b9ff00;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-style: italic;
+    font-size: 0.72em;
+    position: relative;
+    top: 8px;
+  }
+
+  .tagline {
+    position: absolute;
+    bottom: 44px;
+    right: 80px;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Independent Software Studio — Est. 2026</div>
+  <div class="headline">Second Act <span class="green">Labs.</span></div>
+  <div class="tagline">secondactlabs.com</div>
+</div>
+</body>
+</html>
