@@ -8,10 +8,6 @@
 Local AI image and video organizer for Grok Imagine, Higgsfield, and Digen. Captures prompts, metadata, and media automatically. $39 one-time.
 [gencatalog.app](https://gencatalog.app)
 
-### ClawSentinel
-macOS menu bar utility that monitors the OpenClaw AI gateway. Auto-recovers crashes, detects memory leaks, alerts on token limits. $7.99 one-time.
-[clawsentinel.app](https://clawsentinel.app)
-
 ## About
 
 Second Act Labs is an independent software studio building tools for the AI era. Anonymous founder, shipping in public.
