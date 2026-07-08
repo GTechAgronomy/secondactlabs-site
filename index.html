@@ -181,6 +181,14 @@
       line-height: 1.9;
     }
 
+    .hero-stack {
+      display: block;
+    }
+
+    .hero-stack span {
+      display: block;
+    }
+
     .hero-tag {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 0.875rem;
@@ -253,37 +261,20 @@
       font-weight: 400;
     }
 
+    .pmicro {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+
     .parrow {
       font-size: 1.1rem;
       color: #333;
       transition: color 0.2s, transform 0.2s;
       position: relative;
       z-index: 1;
-    }
-
-    /* ── MANIFESTO ── */
-    .manifesto {
-      padding: 6rem 2.5rem;
-      border-bottom: 1px solid var(--border);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .manifesto.visible { opacity: 1; transform: none; }
-
-    .manifesto-text {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.5rem, 6vw, 5.5rem);
-      line-height: 1.05;
-      letter-spacing: 0.01em;
-    }
-
-    .manifesto-text .em {
-      font-family: 'DM Serif Display', serif;
-      font-style: italic;
-      font-size: 0.88em;
-      color: var(--accent);
-      letter-spacing: -0.01em;
     }
 
     /* ── FOOTER ── */
@@ -321,10 +312,12 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      header, .hero, .products, .manifesto, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+      header, .hero, .products, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
       .product-row { grid-template-columns: 36px 1fr; }
       .parrow { display: none; }
       .product-row::after { left: -1.5rem; right: -1.5rem; }
+      .hero-stack span { display: inline; }
+      .hero-stack span:not(:last-child)::after { content: ' '; }
     }
   </style>
 </head>
@@ -363,7 +356,7 @@
     <span class="line">Act <span class="accent-word">Labs.</span></span>
   </div>
   <div class="hero-sub-row">
-    <p class="hero-sub">Tools built to solve problems I couldn't stop running into.<br>No team. No runway. Just shipping.</p>
+    <p class="hero-sub">Software born from obsession.<br>Every product started as a problem I refused to live with.<span class="hero-stack"><span>No team.</span><span>No runway.</span><span>Just shipping.</span></span></p>
     <span class="hero-tag">Est. 2026</span>
   </div>
 </section>
@@ -375,7 +368,8 @@
     <span class="pnum">01</span>
     <div class="pbody">
       <div class="pname">GenCatalog</div>
-      <div class="pdesc">Stop losing your AI generations. GenCatalog organizes everything — images, videos, prompts, metadata — locally and privately on Mac and Windows.</div>
+      <div class="pdesc">Stop losing your AI generations. GenCatalog organizes images, videos, prompts, and metadata locally and privately on Mac and Windows, built for creators managing thousands of generations.</div>
+      <div class="pmicro">Capture once. Search forever.</div>
     </div>
     <span class="parrow">→</span>
   </a>
@@ -403,7 +397,7 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.08 });
 
-  document.querySelectorAll('.product-row, .manifesto, footer').forEach((el, i) => {
+  document.querySelectorAll('.product-row, footer').forEach((el, i) => {
     if (el.classList.contains('product-row')) el.style.transitionDelay = (i * 0.08) + 's';
     io.observe(el);
   });
