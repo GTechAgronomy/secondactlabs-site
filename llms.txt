@@ -1,16 +1,19 @@
 # Second Act Labs
 
-> Independent software studio. Tools built to solve real problems. No team. No runway. Just shipping.
+> A one-person software studio. Every product built because it had to exist. Software, taken personally.
 
 ## Products
 
 ### GenCatalog
-Local AI image and video organizer for Grok Imagine, Gemini, GPT Image, Midjourney, Higgsfield, Digen, and Venice.ai. Captures prompts, metadata, and media automatically on Mac and Windows. $79 one-time.
+The permanent memory for AI creation. Keeps every image, video, prompt and setting from AI tools (Midjourney, Grok Imagine, Gemini, GPT Image and more) in a local library you own, on your own disk. Mac and Windows. $99/year.
 [gencatalog.app](https://gencatalog.app)
+
+### Fieldnote (in development, 2026)
+A private, watch-first voice journal. Speak into your Apple Watch on a walk; come home to on-device transcripts and quiet reflections — an AI editor that notices patterns and never gives advice. Local-first; nothing leaves your devices.
 
 ## About
 
-Second Act Labs is an independent software studio building tools for the AI era. Anonymous founder, shipping in public.
+Second Act Labs is an independent, one-person software studio. The founder's first act was spent around other people's ideas — A&R, venture capital, startups; the second act began in his 40s, building his own. Anonymous founder, shipping in public.
 
 ## Links
 
