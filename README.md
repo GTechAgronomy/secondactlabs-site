@@ -5,7 +5,7 @@ Static site, no build step. Deploy the contents of this folder as-is to any stat
 
 ## Contents
 - index.html — the entire site (inline CSS + vanilla JS: canvas hero, scroll reveals, parallax)
-- assets/ — product screenshots (gencatalog-library.webp, fieldnote-watch.png, fieldnote-reflections.png)
+- assets/ — product screenshots (gencatalog-library.webp, fieldnote-watch.png, fieldnote-page-note.png)
 - favicon.svg
 - robots.txt, sitemap.xml, llms.txt
 - _headers — Cloudflare Pages / Netlify header rules (ignore on other hosts)
