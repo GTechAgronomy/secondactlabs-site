@@ -9,7 +9,7 @@ The permanent memory for AI creation. Keeps every image, video, prompt and setti
 [gencatalog.app](https://gencatalog.app)
 
 ### Fieldnote (in development, 2026)
-A private, watch-first voice journal. Speak into your Apple Watch on a walk; come home to searchable Pages and brief Notes grounded in your words. Local-first; nothing leaves your devices.
+A private, watch-first voice journal. Speak into your Apple Watch on a walk; come home to searchable Pages and brief Notes grounded in your words. Local-first; nothing leaves your devices. An optional Face ID lock protects the journal on iPhone.
 [fieldnotejournal.com](https://fieldnotejournal.com/)
 
 ## About
