@@ -12,6 +12,9 @@ The permanent memory for AI creation. Keeps every image, video, prompt and setti
 A private, watch-first voice journal. Speak into your Apple Watch on a walk; come home to searchable Pages and brief Notes grounded in your words. Local-first; nothing leaves your devices. An optional Face ID lock protects the journal on iPhone.
 [fieldnotejournal.com](https://fieldnotejournal.com/)
 
+### Street Legal (in development)
+Know where you can park. Know until when. Pick a day and time and see every curb in Manhattan colored by what is legal. Street cleaning, hydrants, school-day rules, meters, and the exact hour you will need to move are evaluated together on a single map. Decisions are backed by posted signs and continuously validated against city enforcement data. Where the data cannot be trusted, Street Legal says Unknown instead of guessing. iPhone. Manhattan.
+
 ## About
 
 Second Act Labs is an independent, one-person software studio. The founder's first act was spent around other people's ideas — A&R, venture capital, startups; the second act began in his 40s, building his own. Anonymous founder, shipping in public.
