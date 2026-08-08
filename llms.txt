@@ -8,9 +8,10 @@
 The permanent memory for AI creation. Keeps every image, video, prompt and setting from AI tools (Midjourney, Grok Imagine, Gemini, GPT Image and more) in a local library you own, on your own disk. Mac and Windows. $99/year.
 [gencatalog.app](https://gencatalog.app)
 
-### Fieldnote (in development, 2026)
+### Fieldnote (available now)
 A private, watch-first voice journal. Speak into your Apple Watch on a walk; come home to searchable Pages and brief Notes grounded in your words. Local-first; nothing leaves your devices. An optional Face ID lock protects the journal on iPhone.
 [fieldnotejournal.com](https://fieldnotejournal.com/)
+[Download Fieldnote on the App Store](https://apps.apple.com/us/app/fieldnote-a-voice-journal/id6794043971)
 
 ### Street Legal (in development)
 Know where you can park. Know until when. Pick a day and time and see every curb in Manhattan colored by what is legal. Street cleaning, hydrants, school-day rules, meters, and the exact hour you will need to move are evaluated together on a single map. Decisions are backed by posted signs and continuously validated against city enforcement data. Where the data cannot be trusted, Street Legal says Unknown instead of guessing. iPhone. Manhattan.
