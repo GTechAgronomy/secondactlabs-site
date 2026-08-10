@@ -15,6 +15,7 @@ A private, watch-first voice journal. Speak into your Apple Watch on a walk; com
 
 ### Street Legal (in development)
 Know where you can park. Know until when. Pick a day and time and see every curb in Manhattan colored by what is legal. Street cleaning, hydrants, school-day rules, meters, and the exact hour you will need to move are evaluated together on a single map. Decisions are backed by posted signs and continuously validated against city enforcement data. Where the data cannot be trusted, Street Legal says Unknown instead of guessing. iPhone. Manhattan.
+[streetlegalnyc.com](https://streetlegalnyc.com/)
 
 ## About
 
