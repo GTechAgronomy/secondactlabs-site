@@ -28,6 +28,21 @@
     .lnk:hover{color:#ece7de !important}
     .ulnk{transition:color 0.3s,border-color 0.3s}
     .ulnk:hover{color:#ece7de !important;border-bottom-color:#ece7de !important}
+    .fieldnote-watch-demo{position:relative;display:grid;place-items:center;aspect-ratio:4/3;min-height:390px;overflow:hidden;background:radial-gradient(ellipse at 50% 47%,rgba(236,231,222,0.09),transparent 43%),#0e0d0b}
+    .fieldnote-watch-demo::before{content:"";position:absolute;width:58%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(236,231,222,0.06);box-shadow:0 0 90px rgba(236,231,222,0.035);pointer-events:none}
+    .fieldnote-watch-case{position:relative;width:min(48%,294px);aspect-ratio:1/1.06;border-radius:29%;background:#060605;border:1px solid rgba(236,231,222,0.32);box-shadow:inset 0 0 0 5px #12110f,0 24px 45px rgba(0,0,0,0.5);overflow:hidden}
+    .fieldnote-watch-face{position:absolute;inset:7px;border-radius:27%;background:#050504;overflow:hidden}
+    .fn-idle-ring,.fn-tap,.fn-pen,.fn-wave{position:absolute;pointer-events:none}
+    .fn-idle-ring{left:50%;top:50%;width:28%;aspect-ratio:1;border:2px solid #ece7de;border-radius:50%;transform:translate(-50%,-50%);animation:fnRing 9.6s cubic-bezier(.25,.46,.45,.94) infinite}
+    .fn-tap{left:50%;top:50%;width:14%;aspect-ratio:1;border:1px solid rgba(236,231,222,0.7);border-radius:50%;transform:translate(-50%,-50%);animation:fnTap 9.6s ease-out infinite}
+    .fn-pen{left:76%;top:54%;width:5px;height:5px;border-radius:50%;background:#ece7de;opacity:0;transform:translate(-50%,-50%);animation:fnPen 9.6s ease-out infinite}
+    .fn-wave{inset:0;width:100%;height:100%;overflow:visible}
+    .fn-wave path{fill:none;stroke:#ece7de;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;opacity:0;animation:fnWave 9.6s ease-out infinite}
+    .fn-wave circle{fill:#ece7de;opacity:0;animation:fnPen 9.6s ease-out infinite}
+    @keyframes fnRing{0%,15%{opacity:1;transform:translate(-50%,-50%) scale(1)}20%{opacity:1;transform:translate(-50%,-50%) scale(.94)}29%{opacity:0;transform:translate(100%,-5%) scale(.065)}90%,100%{opacity:0;transform:translate(100%,-5%) scale(.065)}}
+    @keyframes fnTap{0%,16%{opacity:0;transform:translate(-50%,-50%) scale(.35)}18%{opacity:.9;transform:translate(-50%,-50%) scale(.55)}26%{opacity:0;transform:translate(-50%,-50%) scale(2.1)}100%{opacity:0;transform:translate(-50%,-50%) scale(2.1)}}
+    @keyframes fnPen{0%,28%{opacity:0}31%,85%{opacity:1}90%,100%{opacity:0}}
+    @keyframes fnWave{0%,30%{opacity:0;stroke-dashoffset:420}34%{opacity:1;stroke-dashoffset:420}84%{opacity:1;stroke-dashoffset:0}90%,100%{opacity:0;stroke-dashoffset:0}}
     @media (max-width:720px){
       [data-rpad]{padding-left:22px !important;padding-right:22px !important}
       [data-rgrid]{grid-template-columns:1fr !important;gap:40px !important}
@@ -40,6 +55,13 @@
       [data-rhero]{height:62vh !important;min-height:460px !important}
       [data-rvert]{padding-top:72px !important;padding-bottom:36px !important}
       [data-rphone]{max-width:390px !important}
+      .fieldnote-watch-demo{min-height:360px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .fieldnote-watch-demo *, .fieldnote-watch-demo::before{animation:none !important}
+      .fn-idle-ring,.fn-tap{opacity:0 !important}
+      .fn-pen,.fn-wave circle{opacity:1 !important}
+      .fn-wave path{opacity:1 !important;stroke-dashoffset:0 !important}
     }
   </style>
 </head>
@@ -109,8 +131,20 @@
     </div>
   </div>
   <div data-reveal data-rcols style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:28px">
-    <div data-parallax="0.045" style="position:relative;border-radius:14px;border:1px solid rgba(236,231,222,0.14);border-top-color:rgba(236,231,222,0.28);background:#0e0d0b;box-shadow:0 60px 120px -40px rgba(0,0,0,0.8);overflow:hidden">
-      <img src="assets/fieldnote-watch.png" alt="Fieldnote — watch capture" style="display:block;width:100%;height:auto">
+    <div data-parallax="0.045" style="position:relative;border-radius:14px;border:1px solid rgba(236,231,222,0.14);border-top-color:rgba(236,231,222,0.28);box-shadow:0 60px 120px -40px rgba(0,0,0,0.8);overflow:hidden">
+      <div class="fieldnote-watch-demo" role="img" aria-label="Fieldnote on Apple Watch: the recording ring is tapped, contracts into the pen point, and a live waveform is written.">
+        <div class="fieldnote-watch-case" aria-hidden="true">
+          <div class="fieldnote-watch-face">
+            <span class="fn-idle-ring"></span>
+            <span class="fn-tap"></span>
+            <span class="fn-pen"></span>
+            <svg class="fn-wave" viewBox="0 0 100 100" aria-hidden="true">
+              <path pathLength="420" d="M10 54 C17 54 18 52 22 54 C27 57 29 22 34 21 C39 20 39 67 44 63 C48 60 50 43 54 47 C58 52 60 56 64 53 C69 49 69 33 73 35 C77 38 78 56 82 54 L76 54" />
+              <circle cx="76" cy="54" r="1.8"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
     <div data-parallax="0.08" style="position:relative;border-radius:14px;border:1px solid rgba(236,231,222,0.14);border-top-color:rgba(236,231,222,0.28);background:#0e0d0b;box-shadow:0 60px 120px -40px rgba(0,0,0,0.8);overflow:hidden">
       <img src="assets/fieldnote-page-note.png" alt="A Fieldnote Page with a brief Note above the complete original words" style="display:block;width:100%;height:auto">
