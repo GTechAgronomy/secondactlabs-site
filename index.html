@@ -57,7 +57,6 @@
       [data-rbar] > a,[data-rbar] > span{display:none !important}
       [data-rhead]{padding:20px 22px !important}
       [data-rhero]{height:62vh !important;min-height:460px !important}
-      [data-rhero-title]{white-space:normal !important}
       [data-rvert]{padding-top:72px !important;padding-bottom:36px !important}
       [data-rphone]{max-width:390px !important}
       .fieldnote-product-demo{height:520px}
@@ -87,9 +86,10 @@
 <section data-rhero style="position:relative;height:100vh;min-height:720px;overflow:hidden">
   <canvas id="hero-field" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 55% at 50% 46%,transparent 30%,rgba(11,10,9,0.55) 78%,#0b0a09 100%);pointer-events:none"></div>
-  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none;padding:0 24px 7vh;box-sizing:border-box">
-    <h1 data-rhero-title style="margin:0;font-size:clamp(38px,4.6vw,64px);font-weight:500;letter-spacing:-0.04em;line-height:1.08;white-space:nowrap;opacity:0;animation:heroIn 1.2s cubic-bezier(0.16,1,0.3,1) 0.5s forwards">Software, taken personally.</h1>
-    <p style="margin:24px 0 0;font-size:15px;line-height:1.8;color:rgba(236,231,222,0.6);max-width:400px;font-weight:300;opacity:0;animation:heroIn 1.2s cubic-bezier(0.16,1,0.3,1) 0.75s forwards;text-wrap:pretty">A studio of one, building software I wanted to exist.</p>
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none;padding:0 24px">
+    <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.3em;color:rgba(236,231,222,0.5);opacity:0;animation:heroIn 1.2s cubic-bezier(0.16,1,0.3,1) 0.3s forwards">A STUDIO OF ONE — EST. 2026</div>
+    <h1 style="margin:28px 0 0;font-size:clamp(48px,6.4vw,92px);font-weight:500;letter-spacing:-0.045em;line-height:1.02;opacity:0;animation:heroIn 1.2s cubic-bezier(0.16,1,0.3,1) 0.5s forwards">Software, taken <em style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:300;letter-spacing:-0.02em">personally</em>.</h1>
+    <p style="margin:30px 0 0;font-size:15px;line-height:1.8;color:rgba(236,231,222,0.6);max-width:400px;font-weight:300;opacity:0;animation:heroIn 1.2s cubic-bezier(0.16,1,0.3,1) 0.75s forwards;text-wrap:pretty">A studio of one, building software I wanted to exist.</p>
   </div>
   <div data-rbar style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:24px 44px;border-top:1px solid rgba(236,231,222,0.09);opacity:0;animation:heroIn 1.2s cubic-bezier(0.16,1,0.3,1) 1s forwards">
     <a class="lnk" href="https://gencatalog.app" target="_blank" rel="noopener" style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.16em;color:rgba(236,231,222,0.55);text-decoration:none">NOW SHIPPING — GENCATALOG ↗</a>
