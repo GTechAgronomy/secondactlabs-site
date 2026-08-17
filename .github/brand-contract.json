@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "identity": "refreshed-2026-08",
+  "recoveryTag": "approved-brand-2026-08-17",
+  "requiredFiles": [
+    "index.html",
+    "llms.txt",
+    "robots.txt",
+    "sitemap.xml",
+    "favicon.svg",
+    "favicon.ico",
+    "favicon-16.png",
+    "favicon-32.png",
+    "avatar-180.png",
+    "avatar-512.png",
+    "assets/gencatalog-library.webp",
+    "assets/fieldnote-watch.png",
+    "assets/fieldnote-page-note.png",
+    "assets/street-legal-parked.png",
+    "assets/shachar-plan.jpg",
+    "assets/shachar-splash-dark.png"
+  ],
+  "forbiddenFiles": [
+    "design-qa.md",
+    "assets/second-act-labs-header-lockup.png",
+    "assets/shachar-splash.jpeg"
+  ],
+  "requiredHtmlSnippets": [
+    "family=EB+Garamond",
+    "family:'Archivo'",
+    "family:'IBM Plex Mono'",
+    "<span>Second <em>Act</em> Labs</span>",
+    "Software, taken personally.",
+    "grid-template-columns:repeat(4,minmax(0,1fr))",
+    "SHACHAR: A SHABBAT ALARM",
+    "Built by",
+    "href=\"/favicon.ico\"",
+    "href=\"/avatar-180.png\"",
+    "https://gencatalog.app",
+    "https://apps.apple.com/us/app/fieldnote-a-voice-journal/id6794043971",
+    "https://streetlegalnyc.com/",
+    "https://getshachar.com/"
+  ],
+  "forbiddenHtmlSnippets": [
+    "A STUDIO OF ONE",
+    "EST. 2026",
+    "second-act-labs-header-lockup",
+    "mix-blend-mode",
+    "family=Geist",
+    "family=Newsreader"
+  ],
+  "expectedCounts": {
+    "class=\"idx\"": 4,
+    "Second <em>Act</em> Labs": 2,
+    "<section data-rhero": 1
+  },
+  "identityAssetSha256": {
+    "favicon.svg": "6efed1d7fd958be937192dc9934d2eadd03afd909759882ee09226f169dd0f5c",
+    "favicon.ico": "e371fad53dcf63745071a5640219f7322c64c92808b1508e0a79eb6603a4eeb1",
+    "favicon-16.png": "3a48396f8a596ccb2e1451819a61f30741791943f70fa879133b76b935535adf",
+    "favicon-32.png": "96d85b6e42216fd8d6a5d6dd89b8f47ac4d8457da5981f2fe56b2b8fd728708f",
+    "avatar-180.png": "f5510b2a02b1f3b652a30720aac7344cb19da97c02841dd6339ac96eee5fb5c9",
+    "avatar-512.png": "415a56395a2c38f68c29eecc0c6fd284bd253f9d19d1795bad5f68a8253facc3"
+  }
+}

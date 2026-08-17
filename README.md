@@ -1,7 +1,7 @@
 # Second Act Labs — site deploy package (brand refresh, Aug 2026)
 
-Static site, no build step. Deploy the contents of this folder as-is to any static host
-(Cloudflare Pages, Netlify, Vercel, S3, GitHub Pages).
+Static site, no build step. Production is the Git-connected Cloudflare Pages project
+`secondactlabs-site`, deployed from the protected `master` branch.
 
 ## Contents
 - index.html — the entire site (inline CSS + vanilla JS: contour-field hero, scroll reveals, parallax, hide-on-scroll header)
@@ -24,3 +24,11 @@ Static site, no build step. Deploy the contents of this folder as-is to any stat
 - Hero canvas and scroll effects degrade gracefully without JS (content stays visible).
 - gencatalog-library.webp is 5120px wide (918 KB). Optionally generate a ~2400px version to save bandwidth.
 - Update sitemap.xml lastmod on future edits.
+
+## Release safety
+- `master` is the production source of truth. Direct production uploads and dirty-worktree deploys are prohibited.
+- Run `node .github/scripts/verify-site.mjs` before opening a pull request.
+- `.github/brand-contract.json` pins the approved refreshed identity, required homepage markers, product count, and identity-asset hashes.
+- The required `Verify approved site` check blocks identity regressions before merge.
+- `Verify production parity` checks every production push and runs hourly so an out-of-band deployment cannot remain silent.
+- The approved recovery point is tagged `approved-brand-2026-08-17`.
