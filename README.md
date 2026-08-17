@@ -30,5 +30,5 @@ Static site, no build step. Production is the Git-connected Cloudflare Pages pro
 - Run `node .github/scripts/verify-site.mjs` before opening a pull request.
 - `.github/brand-contract.json` pins the approved refreshed identity, required homepage markers, product count, and identity-asset hashes.
 - The required `Verify approved site` check blocks identity regressions before merge.
-- `Verify production parity` checks every production push and runs hourly so an out-of-band deployment cannot remain silent.
+- `Verify production parity` checks every production push and runs every 15 minutes so an out-of-band deployment cannot remain silent.
 - The approved recovery point is tagged `approved-brand-2026-08-17`.
