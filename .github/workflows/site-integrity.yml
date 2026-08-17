@@ -1,0 +1,53 @@
+name: Site integrity
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify approved site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Verify refreshed identity contract
+        run: node .github/scripts/verify-site.mjs
+      - name: Reject whitespace errors
+        run: git diff --check
+
+  production-parity:
+    name: Verify production parity
+    if: github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Wait for canonical site to match committed homepage
+        shell: bash
+        run: |
+          set -euo pipefail
+          live_file="$(mktemp)"
+          trap 'rm -f "$live_file"' EXIT
+          attempts=1
+          if [[ "${{ github.event_name }}" == "push" ]]; then attempts=36; fi
+          for attempt in $(seq 1 "$attempts"); do
+            curl -fsSL -H 'Cache-Control: no-cache' "https://secondactlabs.com/?integrity=${GITHUB_SHA}-${attempt}" -o "$live_file"
+            if cmp -s index.html "$live_file"; then
+              echo "Canonical homepage matches ${GITHUB_SHA}."
+              exit 0
+            fi
+            if [[ "$attempt" -lt "$attempts" ]]; then sleep 5; fi
+          done
+          echo "Canonical homepage does not match ${GITHUB_SHA}." >&2
+          sha256sum index.html "$live_file" >&2
+          exit 1
